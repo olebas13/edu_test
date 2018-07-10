@@ -1,25 +1,25 @@
 package ua.olebas.tests.addressbook;
 
 public class GroupData {
-	private final String mName;
-	private final String mHeader;
-	private final String mFooter;
+	private final String name;
+	private final String header;
+	private final String footer;
 
 	public GroupData(String name, String header, String footer) {
-		mName = name;
-		mHeader = header;
-		mFooter = footer;
+		this.name = name;
+		this.header = header;
+		this.footer = footer;
 	}
 
 	public String getName() {
-		return mName;
+		return name;
 	}
 
 	public String getHeader() {
-		return mHeader;
+		return header;
 	}
 
 	public String getFooter() {
-		return mFooter;
+		return footer;
 	}
 }
