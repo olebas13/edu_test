@@ -401,7 +401,7 @@
       <updated>1531124067332</updated>
       <workItem from="1531124071455" duration="7300000" />
       <workItem from="1531204311157" duration="597000" />
-      <workItem from="1531212403498" duration="1324000" />
+      <workItem from="1531212403498" duration="1589000" />
     </task>
     <servers />
   </component>
@@ -415,13 +415,15 @@
     <history-entry file="GroupCreationTests - 2018.07.09 at 14h 50m 08s.xml">
       <configuration name="GroupCreationTests" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="GroupDeletionTests - 2018.07.10 at 12h 08m 40s.xml">
+      <configuration name="GroupDeletionTests" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9221000" />
+    <option name="totallyTimeSpent" value="9486000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
@@ -433,8 +435,8 @@
       <window_info anchor="right" id="Maven Projects" order="3" weight="0.32995737" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.32960895" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.273743" />
+      <window_info anchor="bottom" id="Run" order="2" weight="0.32960895" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.27262568" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
       <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18123667" />
@@ -562,6 +564,32 @@
             <element signature="e#2396#2397#0" expanded="true" />
             <element signature="e#2452#2453#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/tests.uml">
+      <provider selected="true" editor-type-id="UmlEditorProvider">
+        <state>
+          <ID>JAVA</ID>
+          <OriginalElement />
+          <nodes>
+            <node x="" y="">ua.olebas.tests.addressbook.TestBase</node>
+            <node x="" y="">ua.olebas.tests.addressbook.GroupDeletionTests</node>
+            <node x="" y="">ua.olebas.tests.addressbook.GroupCreationTests</node>
+            <node x="" y="">ua.olebas.tests.addressbook.GroupData</node>
+          </nodes>
+          <notes />
+          <edges />
+          <settings layout="Hierarchic Group" zoom="1.0" x="0.0" y="309.0" />
+          <SelectedNodes />
+          <Categories>
+            <Category>Methods</Category>
+            <Category>Properties</Category>
+            <Category>Constructors</Category>
+            <Category>Fields</Category>
+          </Categories>
+          <SCOPE>All</SCOPE>
+          <VISIBILITY>private</VISIBILITY>
         </state>
       </provider>
     </entry>
