@@ -3,30 +3,30 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="0.0" y="0.0">ua.olebas.tests.addressbook.appmanager.ApplicationManager</node>
-    <node x="279.0" y="146.0">ua.olebas.tests.addressbook.tests.GroupDeletionTests</node>
-    <node x="388.25" y="0.0">ua.olebas.tests.addressbook.tests.TestBase</node>
-    <node x="498.0" y="146.0">ua.olebas.tests.addressbook.tests.GroupCreationTests</node>
-    <node x="0.0" y="340.0">ua.olebas.tests.addressbook.model.GroupData</node>
+    <node x="-269.0" y="273.0">ua.olebas.tests.addressbook.appmanager.ApplicationManager</node>
+    <node x="0.0" y="146.0">ua.olebas.tests.addressbook.tests.GroupDeletionTests</node>
+    <node x="109.25" y="0.0">ua.olebas.tests.addressbook.tests.TestBase</node>
+    <node x="219.0" y="146.0">ua.olebas.tests.addressbook.tests.GroupCreationTests</node>
+    <node x="285.0" y="242.0">ua.olebas.tests.addressbook.model.GroupData</node>
   </nodes>
   <notes />
   <edges>
     <edge source="ua.olebas.tests.addressbook.tests.GroupDeletionTests" target="ua.olebas.tests.addressbook.tests.TestBase">
       <point x="0.0" y="-25.5" />
-      <point x="378.5" y="121.0" />
-      <point x="438.25" y="121.0" />
+      <point x="99.5" y="121.0" />
+      <point x="159.25" y="121.0" />
       <point x="-50.0" y="48.0" />
     </edge>
     <edge source="ua.olebas.tests.addressbook.tests.GroupCreationTests" target="ua.olebas.tests.addressbook.tests.TestBase">
       <point x="0.0" y="-25.5" />
-      <point x="598.0" y="121.0" />
-      <point x="538.25" y="121.0" />
+      <point x="319.0" y="121.0" />
+      <point x="259.25" y="121.0" />
       <point x="50.0" y="48.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="768.0" y="421.5" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="349.0" y="229.0" />
   <SelectedNodes>
-    <node>ua.olebas.tests.addressbook.tests.GroupDeletionTests</node>
+    <node>ua.olebas.tests.addressbook.appmanager.ApplicationManager</node>
   </SelectedNodes>
   <Categories>
     <Category>Fields</Category>
