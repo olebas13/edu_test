@@ -1,4 +1,4 @@
-package ua.olebas.tests.addressbook;
+package ua.olebas.tests.addressbook.model;
 
 public class GroupData {
 	private final String name;

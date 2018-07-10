@@ -1,21 +1,17 @@
-package ua.olebas.tests.addressbook;
+package ua.olebas.tests.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.NoAlertPresentException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.testng.annotations.AfterClass;
-import org.testng.annotations.BeforeClass;
+import ua.olebas.tests.addressbook.model.GroupData;
 
 import java.util.concurrent.TimeUnit;
 
-public class TestBase {
-
-
+public class ApplicationManager {
 	private WebDriver driver;
 
-	@BeforeClass(alwaysRun = true)
-	public void setUp() {
+	public void init() {
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("http://localhost/addressbook/");
@@ -32,15 +28,15 @@ public class TestBase {
 		driver.findElement(By.xpath("//input[@value='LOGIN']")).click();
 	}
 
-	protected void returnToGroupPage() {
+	public void returnToGroupPage() {
 		driver.findElement(By.linkText("group page")).click();
 	}
 
-	protected void submitGroupCreation() {
+	public void submitGroupCreation() {
 		driver.findElement(By.name("submit")).click();
 	}
 
-	protected void fillGroupForm(GroupData groupData) {
+	public void fillGroupForm(GroupData groupData) {
 		driver.findElement(By.name("group_name")).click();
 		driver.findElement(By.name("group_name")).clear();
 		driver.findElement(By.name("group_name")).sendKeys(groupData.getName());
@@ -52,20 +48,19 @@ public class TestBase {
 		driver.findElement(By.name("group_footer")).sendKeys(groupData.getFooter());
 	}
 
-	protected void initGroupCreation() {
+	public void initGroupCreation() {
 		driver.findElement(By.name("new")).click();
 	}
 
-	protected void gotoGroupPage() {
+	public void gotoGroupPage() {
 		driver.findElement(By.linkText("GROUPS")).click();
 	}
 
-	@AfterClass(alwaysRun = true)
-	public void tearDown() {
+	public void stop() {
 		driver.quit();
 	}
 
-	private boolean isAlertPresent() {
+	public boolean isAlertPresent() {
 		try {
 			driver.switchTo().alert();
 			return true;
@@ -74,11 +69,11 @@ public class TestBase {
 		}
 	}
 
-	protected void deleteSelectedGroups() {
+	public void deleteSelectedGroups() {
 		driver.findElement(By.name("delete")).click();
 	}
 
-	protected void selectGroup() {
+	public void selectGroup() {
 		driver.findElement(By.name("selected[]")).click();
 	}
 }
