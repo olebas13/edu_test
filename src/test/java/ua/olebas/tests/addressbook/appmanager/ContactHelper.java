@@ -30,7 +30,7 @@ public class ContactHelper extends HelperBase {
 	}
 
 	public void initContactModification() {
-		click(By.xpath("//a[@href='edit.php?id=4']//img[@title='EDIT']"));
+		click(By.xpath("//*[@id=\"maintable\"]/tbody/tr[2]/td[8]/a/img"));
 	}
 
 	public void selectContact() {
@@ -40,5 +40,9 @@ public class ContactHelper extends HelperBase {
 	public void deleteSelectedContacts() {
 		click(By.xpath("//input[@value='DELETE']"));
 		isAlertPresent();
+	}
+
+	public void submitContactModification() {
+		click(By.xpath("//input[@value='UPDATE']"));
 	}
 }
