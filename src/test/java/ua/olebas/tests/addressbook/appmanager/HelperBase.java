@@ -23,7 +23,7 @@ public class HelperBase {
 
 	public boolean isAlertPresent() {
 		try {
-			driver.switchTo().alert();
+			driver.switchTo().alert().accept();
 			return true;
 		} catch (NoAlertPresentException e) {
 			return false;
