@@ -11,13 +11,15 @@ public class ApplicationManager {
 
 	private SessionHelper sessionHelper;
 	private NavigationHelper navigationHelper;
-	private GroupHelper groupsHelper;
+	private GroupHelper groupHelper;
+	private ContactHelper contactHelper;
 
 	public void init() {
 		driver = new FirefoxDriver();
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		driver.get("http://localhost/addressbook/");
-		groupsHelper = new GroupHelper(driver);
+		groupHelper = new GroupHelper(driver);
+		contactHelper = new ContactHelper(driver);
 		navigationHelper = new NavigationHelper(driver);
 		sessionHelper = new SessionHelper(driver);
 		sessionHelper.login("admin", "secret");
@@ -27,11 +29,15 @@ public class ApplicationManager {
 		driver.quit();
 	}
 
-	public GroupHelper getGroupsHelper() {
-		return groupsHelper;
+	public GroupHelper getGroupHelper() {
+		return groupHelper;
 	}
 
 	public NavigationHelper getNavigationHelper() {
 		return navigationHelper;
+	}
+
+	public ContactHelper getContactHelper() {
+		return contactHelper;
 	}
 }

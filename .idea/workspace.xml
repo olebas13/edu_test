@@ -2,12 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aac8a79c-d1de-4bc1-af30-8a1f1e5d9a87" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/HelperBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/ContactHelper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/model/ContactData.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/contacts/ContactCreationTests.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupModificationTests.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/ApplicationManager.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/ApplicationManager.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/GroupsHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/GroupHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/GroupHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/GroupHelper.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/NavigationHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/NavigationHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/SessionHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/SessionHelper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupCreationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/GroupDeletionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupDeletionTests.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -35,10 +39,10 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="GroupCreationTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/GroupCreationTests.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupCreationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
-              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+            <state relative-caret-position="221">
+              <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -46,10 +50,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="TestBase.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/TestBase.java">
+      <file leaf-file-name="GroupModificationTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupModificationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
+            <state relative-caret-position="102">
               <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -58,11 +62,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ApplicationManager.java" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/ApplicationManager.java">
+      <file leaf-file-name="ContactCreationTests.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/contacts/ContactCreationTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" selection-start-line="2" selection-end-line="2" />
+            <state relative-caret-position="238">
+              <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -70,46 +74,16 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="tests.uml" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/tests.uml">
-          <provider selected="true" editor-type-id="UmlEditorProvider">
-            <state>
-              <ID>JAVA</ID>
-              <OriginalElement />
-              <nodes>
-                <node x="-269.0" y="273.0">ua.olebas.tests.addressbook.appmanager.ApplicationManager</node>
-                <node x="0.0" y="146.0">ua.olebas.tests.addressbook.tests.GroupDeletionTests</node>
-                <node x="109.25" y="0.0">ua.olebas.tests.addressbook.tests.TestBase</node>
-                <node x="219.0" y="146.0">ua.olebas.tests.addressbook.tests.GroupCreationTests</node>
-                <node x="285.0" y="242.0">ua.olebas.tests.addressbook.model.GroupData</node>
-              </nodes>
-              <notes />
-              <edges>
-                <edge source="ua.olebas.tests.addressbook.tests.GroupDeletionTests" target="ua.olebas.tests.addressbook.tests.TestBase">
-                  <point x="0.0" y="-25.5" />
-                  <point x="99.5" y="121.0" />
-                  <point x="159.25" y="121.0" />
-                  <point x="-50.0" y="48.0" />
-                </edge>
-                <edge source="ua.olebas.tests.addressbook.tests.GroupCreationTests" target="ua.olebas.tests.addressbook.tests.TestBase">
-                  <point x="0.0" y="-25.5" />
-                  <point x="319.0" y="121.0" />
-                  <point x="259.25" y="121.0" />
-                  <point x="50.0" y="48.0" />
-                </edge>
-              </edges>
-              <settings layout="Hierarchic Group" zoom="0.5882352941176471" x="129.0" y="229.0" />
-              <SelectedNodes>
-                <node>ua.olebas.tests.addressbook.appmanager.ApplicationManager</node>
-              </SelectedNodes>
-              <Categories>
-                <Category>Fields</Category>
-                <Category>Constructors</Category>
-                <Category>Methods</Category>
-                <Category>Properties</Category>
-              </Categories>
-              <SCOPE>All</SCOPE>
-              <VISIBILITY>private</VISIBILITY>
+      <file leaf-file-name="ApplicationManager.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/ApplicationManager.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="59">
+              <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#1020#1021#0" expanded="true" />
+                <element signature="e#1047#1048#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -117,14 +91,16 @@
       <file leaf-file-name="NavigationHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/NavigationHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="289">
-              <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+            <state relative-caret-position="306">
+              <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#242#243#0" expanded="true" />
                 <element signature="e#253#254#0" expanded="true" />
                 <element signature="e#294#295#0" expanded="true" />
                 <element signature="e#308#309#0" expanded="true" />
+                <element signature="e#364#365#0" expanded="true" />
+                <element signature="e#374#375#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -133,20 +109,26 @@
       <file leaf-file-name="GroupHelper.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/GroupHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="153">
-              <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
+            <state relative-caret-position="184">
+              <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#257#258#0" expanded="true" />
                 <element signature="e#277#278#0" expanded="true" />
                 <element signature="e#331#332#0" expanded="true" />
                 <element signature="e#391#392#0" expanded="true" />
+                <element signature="e#429#430#0" expanded="true" />
+                <element signature="e#481#482#0" expanded="true" />
                 <element signature="e#1130#1131#0" expanded="true" />
                 <element signature="e#1179#1180#0" expanded="true" />
                 <element signature="e#1218#1219#0" expanded="true" />
                 <element signature="e#1270#1271#0" expanded="true" />
                 <element signature="e#1300#1301#0" expanded="true" />
                 <element signature="e#1356#1357#0" expanded="true" />
+                <element signature="e#878#879#0" expanded="true" />
+                <element signature="e#892#893#0" expanded="true" />
+                <element signature="e#949#950#0" expanded="true" />
+                <element signature="e#963#964#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -155,47 +137,57 @@
       <file leaf-file-name="HelperBase.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/HelperBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
+            <state relative-caret-position="442">
               <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#212#213#0" expanded="true" />
-                <element signature="e#239#240#0" expanded="true" />
-                <element signature="e#276#277#0" expanded="true" />
-                <element signature="e#318#319#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="SessionHelper.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/SessionHelper.java">
+      <file leaf-file-name="ContactHelper.java" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/ContactHelper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="16" column="51" selection-start-line="16" selection-start-column="51" selection-end-line="16" selection-end-column="51" />
+            <state relative-caret-position="467">
+              <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#210#211#0" expanded="true" />
-                <element signature="e#224#225#0" expanded="true" />
+                <element signature="e#178#179#0" expanded="true" />
+                <element signature="e#198#199#0" expanded="true" />
+                <element signature="e#237#238#0" expanded="true" />
+                <element signature="e#251#252#0" expanded="true" />
+                <element signature="e#622#623#0" expanded="true" />
+                <element signature="e#636#637#0" expanded="true" />
+                <element signature="e#691#692#0" expanded="true" />
+                <element signature="e#705#706#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file leaf-file-name="GroupDeletionTests.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/GroupDeletionTests.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupDeletionTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="68">
-              <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
+            <state relative-caret-position="85">
+              <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GroupData.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/model/GroupData.java">
+      <file leaf-file-name="ContactData.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/model/ContactData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="34">
-              <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+            <state relative-caret-position="204">
+              <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+              <folding>
+                <element signature="e#354#355#0" expanded="true" />
+                <element signature="e#377#378#0" expanded="true" />
+                <element signature="e#409#410#0" expanded="true" />
+                <element signature="e#431#432#0" expanded="true" />
+                <element signature="e#460#461#0" expanded="true" />
+                <element signature="e#479#480#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -235,11 +227,15 @@
         <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/ApplicationManager.java" />
         <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/GroupCreationTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/GroupsHelper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/GroupHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/SessionHelper.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/NavigationHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/HelperBase.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/GroupHelper.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/GroupModificationTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/model/ContactData.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/NavigationHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/ApplicationManager.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/contacts/ContactCreationTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/ContactHelper.java" />
       </list>
     </option>
   </component>
@@ -370,6 +366,26 @@
               <item name="addressbook" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
             </path>
+            <path>
+              <item name="edu_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="edu_test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="addressbook" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="contacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="edu_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="edu_test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="addressbook" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="groups" type="462c0819:PsiDirectoryNode" />
+            </path>
           </expand>
           <select />
         </subPane>
@@ -409,7 +425,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ua.olebas.tests.addressbook.tests">
+  <component name="RunManager" selected="TestNG.ContactCreationTests">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
     </configuration>
@@ -429,6 +445,35 @@
       </option>
       <patterns />
     </configuration>
+    <configuration name="ContactCreationTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="edu_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.olebas.tests.addressbook.tests.contacts.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="ua.olebas.tests.addressbook.tests.contacts" />
+      <option name="MAIN_CLASS_NAME" value="ua.olebas.tests.addressbook.tests.contacts.ContactCreationTests" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
     <configuration name="GroupCreationTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
       <module name="edu_test" />
       <extension name="coverage">
@@ -441,7 +486,7 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="ua.olebas.tests.addressbook" />
-      <option name="MAIN_CLASS_NAME" value="ua.olebas.tests.addressbook.tests.GroupCreationTests" />
+      <option name="MAIN_CLASS_NAME" value="ua.olebas.tests.addressbook.tests.groups.GroupCreationTests" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -470,7 +515,36 @@
       <option name="ALTERNATIVE_JRE_PATH" />
       <option name="SUITE_NAME" />
       <option name="PACKAGE_NAME" value="ua.olebas.tests.addressbook" />
-      <option name="MAIN_CLASS_NAME" value="ua.olebas.tests.addressbook.tests.GroupDeletionTests" />
+      <option name="MAIN_CLASS_NAME" value="ua.olebas.tests.addressbook.tests.groups.GroupDeletionTests" />
+      <option name="METHOD_NAME" />
+      <option name="GROUP_NAME" />
+      <option name="TEST_OBJECT" value="CLASS" />
+      <option name="VM_PARAMETERS" value="-ea" />
+      <option name="PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <option name="OUTPUT_DIRECTORY" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <option name="TEST_SEARCH_SCOPE">
+        <value defaultName="singleModule" />
+      </option>
+      <option name="USE_DEFAULT_REPORTERS" value="false" />
+      <option name="PROPERTIES_FILE" />
+      <properties />
+      <listeners />
+    </configuration>
+    <configuration name="GroupModificationTests" type="TestNG" factoryName="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="edu_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.olebas.tests.addressbook.tests.groups.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="SUITE_NAME" />
+      <option name="PACKAGE_NAME" value="ua.olebas.tests.addressbook.tests" />
+      <option name="MAIN_CLASS_NAME" value="ua.olebas.tests.addressbook.tests.groups.GroupModificationTests" />
       <option name="METHOD_NAME" />
       <option name="GROUP_NAME" />
       <option name="TEST_OBJECT" value="CLASS" />
@@ -542,9 +616,13 @@
       <item itemvalue="TestNG.GroupCreationTests" />
       <item itemvalue="TestNG.GroupDeletionTests" />
       <item itemvalue="TestNG.ua.olebas.tests.addressbook.tests" />
+      <item itemvalue="TestNG.GroupModificationTests" />
+      <item itemvalue="TestNG.ContactCreationTests" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ContactCreationTests" />
+        <item itemvalue="TestNG.GroupModificationTests" />
         <item itemvalue="TestNG.ua.olebas.tests.addressbook.tests" />
         <item itemvalue="TestNG.GroupDeletionTests" />
         <item itemvalue="TestNG.GroupCreationTests" />
@@ -564,7 +642,7 @@
       <workItem from="1531124071455" duration="7300000" />
       <workItem from="1531204311157" duration="597000" />
       <workItem from="1531212403498" duration="4266000" />
-      <workItem from="1532334206590" duration="1117000" />
+      <workItem from="1532334206590" duration="3648000" />
     </task>
     <task id="LOCAL-00001" summary="push">
       <created>1531214012118</created>
@@ -589,9 +667,15 @@
     <history-entry file="GroupDeletionTests - 2018.07.10 at 12h 08m 40s.xml">
       <configuration name="GroupDeletionTests" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="ua_olebas_tests_addressbook_tests - 2018.07.23 at 11h 42m 59s.xml">
+      <configuration name="ua.olebas.tests.addressbook.tests" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="GroupModificationTests - 2018.07.23 at 11h 56m 43s.xml">
+      <configuration name="GroupModificationTests" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="13280000" />
+    <option name="totallyTimeSpent" value="15811000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
@@ -599,6 +683,7 @@
     <layout>
       <window_info anchor="right" id="Palette" order="3" />
       <window_info anchor="bottom" id="TODO" order="6" />
+      <window_info anchor="bottom" id="Messages" order="11" weight="0.32960895" />
       <window_info anchor="right" id="Palette&#9;" order="8" />
       <window_info id="Image Layers" order="2" />
       <window_info anchor="right" id="Capture Analysis" order="4" />
@@ -606,8 +691,8 @@
       <window_info anchor="right" id="Maven Projects" order="7" weight="0.32995737" />
       <window_info anchor="bottom" id="Database Changes" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="10" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.32960895" />
-      <window_info anchor="bottom" id="Terminal" order="8" weight="0.26927373" />
+      <window_info anchor="bottom" id="Run" order="2" visible="true" weight="0.32960895" />
+      <window_info anchor="bottom" id="Terminal" order="8" weight="0.26815644" />
       <window_info id="Capture Tool" order="6" />
       <window_info id="Designer" order="3" />
       <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18283582" />
@@ -624,7 +709,6 @@
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Find" order="1" />
-      <window_info anchor="bottom" id="Messages" order="11" weight="0.32960895" />
     </layout>
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -645,7 +729,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/GroupCreationTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupCreationTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
@@ -671,6 +755,8 @@
           <caret line="29" column="5" lean-forward="true" selection-start-line="29" selection-start-column="5" selection-end-line="29" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -727,6 +813,8 @@
             <element signature="e#253#254#0" expanded="true" />
             <element signature="e#294#295#0" expanded="true" />
             <element signature="e#308#309#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
           </folding>
         </state>
       </provider>
@@ -741,17 +829,23 @@
             <element signature="e#277#278#0" expanded="true" />
             <element signature="e#331#332#0" expanded="true" />
             <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#481#482#0" expanded="true" />
             <element signature="e#1130#1131#0" expanded="true" />
             <element signature="e#1179#1180#0" expanded="true" />
             <element signature="e#1218#1219#0" expanded="true" />
             <element signature="e#1270#1271#0" expanded="true" />
             <element signature="e#1300#1301#0" expanded="true" />
             <element signature="e#1356#1357#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#949#950#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/GroupDeletionTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupDeletionTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="68">
           <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
@@ -784,7 +878,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/GroupCreationTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupCreationTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="722">
           <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
@@ -814,7 +908,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/GroupCreationTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupCreationTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="722">
           <caret line="45" column="23" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
@@ -860,13 +954,6 @@
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor" />
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/GroupDeletionTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="68">
-          <caret line="4" column="13" selection-start-line="4" selection-start-column="13" selection-end-line="4" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/tests.uml">
       <provider selected="true" editor-type-id="UmlEditorProvider">
         <state>
@@ -909,33 +996,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/model/GroupData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/GroupHelper.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="153">
-          <caret line="9" column="40" lean-forward="true" selection-start-line="9" selection-start-column="40" selection-end-line="9" selection-end-column="40" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#257#258#0" expanded="true" />
-            <element signature="e#277#278#0" expanded="true" />
-            <element signature="e#331#332#0" expanded="true" />
-            <element signature="e#391#392#0" expanded="true" />
-            <element signature="e#1130#1131#0" expanded="true" />
-            <element signature="e#1179#1180#0" expanded="true" />
-            <element signature="e#1218#1219#0" expanded="true" />
-            <element signature="e#1270#1271#0" expanded="true" />
-            <element signature="e#1300#1301#0" expanded="true" />
-            <element signature="e#1356#1357#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/SessionHelper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -948,10 +1008,39 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/GroupCreationTests.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/model/GroupData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="34">
+          <caret line="2" column="13" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/model/ContactData.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="12" column="5" lean-forward="true" selection-start-line="12" selection-start-column="5" selection-end-line="12" selection-end-column="5" />
+          <folding>
+            <element signature="e#354#355#0" expanded="true" />
+            <element signature="e#377#378#0" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#431#432#0" expanded="true" />
+            <element signature="e#460#461#0" expanded="true" />
+            <element signature="e#479#480#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupDeletionTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="85">
           <caret line="5" column="13" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupModificationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="102">
+          <caret line="6" column="13" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -960,38 +1049,102 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/NavigationHelper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="289">
-          <caret line="17" lean-forward="true" selection-start-line="17" selection-end-line="17" />
+        <state relative-caret-position="306">
+          <caret line="18" column="35" selection-start-line="18" selection-start-column="35" selection-end-line="18" selection-end-column="35" />
           <folding>
             <element signature="imports" expanded="true" />
             <element signature="e#242#243#0" expanded="true" />
             <element signature="e#253#254#0" expanded="true" />
             <element signature="e#294#295#0" expanded="true" />
             <element signature="e#308#309#0" expanded="true" />
+            <element signature="e#364#365#0" expanded="true" />
+            <element signature="e#374#375#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/HelperBase.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
+        <state relative-caret-position="442">
           <caret line="30" column="5" selection-start-line="30" selection-start-column="5" selection-end-line="30" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#212#213#0" expanded="true" />
-            <element signature="e#239#240#0" expanded="true" />
-            <element signature="e#276#277#0" expanded="true" />
-            <element signature="e#318#319#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/ApplicationManager.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="34">
-          <caret line="2" selection-start-line="2" selection-end-line="2" />
+        <state relative-caret-position="59">
+          <caret line="14" column="33" selection-start-line="14" selection-start-column="33" selection-end-line="14" selection-end-column="33" />
           <folding>
             <element signature="imports" expanded="true" />
+            <element signature="e#1020#1021#0" expanded="true" />
+            <element signature="e#1047#1048#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/GroupHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="184">
+          <caret line="17" column="16" selection-start-line="17" selection-start-column="16" selection-end-line="17" selection-end-column="16" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#257#258#0" expanded="true" />
+            <element signature="e#277#278#0" expanded="true" />
+            <element signature="e#331#332#0" expanded="true" />
+            <element signature="e#391#392#0" expanded="true" />
+            <element signature="e#429#430#0" expanded="true" />
+            <element signature="e#481#482#0" expanded="true" />
+            <element signature="e#1130#1131#0" expanded="true" />
+            <element signature="e#1179#1180#0" expanded="true" />
+            <element signature="e#1218#1219#0" expanded="true" />
+            <element signature="e#1270#1271#0" expanded="true" />
+            <element signature="e#1300#1301#0" expanded="true" />
+            <element signature="e#1356#1357#0" expanded="true" />
+            <element signature="e#878#879#0" expanded="true" />
+            <element signature="e#892#893#0" expanded="true" />
+            <element signature="e#949#950#0" expanded="true" />
+            <element signature="e#963#964#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupCreationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="221">
+          <caret line="13" column="37" selection-start-line="13" selection-start-column="37" selection-end-line="13" selection-end-column="37" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/contacts/ContactCreationTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="238">
+          <caret line="14" column="49" lean-forward="true" selection-start-line="14" selection-start-column="49" selection-end-line="14" selection-end-column="49" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/ContactHelper.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="467">
+          <caret line="28" column="27" selection-start-line="28" selection-start-column="27" selection-end-line="28" selection-end-column="27" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#178#179#0" expanded="true" />
+            <element signature="e#198#199#0" expanded="true" />
+            <element signature="e#237#238#0" expanded="true" />
+            <element signature="e#251#252#0" expanded="true" />
+            <element signature="e#622#623#0" expanded="true" />
+            <element signature="e#636#637#0" expanded="true" />
+            <element signature="e#691#692#0" expanded="true" />
+            <element signature="e#705#706#0" expanded="true" />
           </folding>
         </state>
       </provider>
