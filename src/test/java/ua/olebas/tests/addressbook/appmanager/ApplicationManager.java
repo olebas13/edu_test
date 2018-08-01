@@ -33,7 +33,7 @@ public class ApplicationManager {
 
 
 		driver.manage().window().maximize();
-		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.get("http://localhost/addressbook/");
 		groupHelper = new GroupHelper(driver);
 		contactHelper = new ContactHelper(driver);

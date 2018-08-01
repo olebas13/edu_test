@@ -10,7 +10,7 @@ public class ContactModificationTests extends TestBase {
 	public void testContactModification() {
 		app.getNavigationHelper().gotoContactPage();
 		app.getContactHelper().initContactModification();
-		app.getContactHelper().fillContactForm(new ContactData("Oleg", "Nevoyt", "1548464648647"));
+		app.getContactHelper().fillContactForm(new ContactData("Oleg", "Nevoyt", "1548464648647", null), false);
 		app.getContactHelper().submitContactModification();
 		app.getContactHelper().returnToContactPage();
 	}
