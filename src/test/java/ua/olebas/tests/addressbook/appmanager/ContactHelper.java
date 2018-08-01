@@ -12,7 +12,7 @@ public class ContactHelper extends HelperBase {
 	}
 
 	public void initContactCreation() {
-		click(By.linkText("ADD_NEW"));
+		click(By.linkText("add_new"));
 	}
 
 	public void fillContactForm(ContactData contactData) {
@@ -38,11 +38,11 @@ public class ContactHelper extends HelperBase {
 	}
 
 	public void deleteSelectedContacts() {
-		click(By.xpath("//input[@value='DELETE']"));
+		click(By.xpath("//input[@value='Delete']"));
 		isAlertPresent();
 	}
 
 	public void submitContactModification() {
-		click(By.xpath("//input[@value='UPDATE']"));
+		click(By.xpath("//input[@value='Update']"));
 	}
 }
