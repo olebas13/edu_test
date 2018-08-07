@@ -41,7 +41,7 @@ public class ContactHelper extends HelperBase {
 		click(By.xpath("//*[@id=\"maintable\"]/tbody/tr[2]/td[8]/a/img"));
 	}
 
-	public void selectContact() {
+	public void selectContactForDelete() {
 		click(By.name("selected[]"));
 	}
 
@@ -64,4 +64,8 @@ public class ContactHelper extends HelperBase {
 		submitContactCreation();
 		returnToContactPage();
 	}
+
+    public int getContactCount() {
+	    return driver.findElements(By.name("selected[]")).size();
+    }
 }
