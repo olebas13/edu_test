@@ -2,9 +2,13 @@ package ua.olebas.tests.addressbook.appmanager;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ua.olebas.tests.addressbook.model.ContactData;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class ContactHelper extends HelperBase {
 
@@ -38,7 +42,7 @@ public class ContactHelper extends HelperBase {
 	}
 
 	public void initContactModification() {
-		click(By.xpath("//*[@id=\"maintable\"]/tbody/tr[2]/td[8]/a/img"));
+		click(By.cssSelector("img[alt='Edit']"));
 	}
 
 	public void selectContactForDelete() {
@@ -68,4 +72,5 @@ public class ContactHelper extends HelperBase {
     public int getContactCount() {
 	    return driver.findElements(By.name("selected[]")).size();
     }
+
 }

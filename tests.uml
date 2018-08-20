@@ -3,28 +3,58 @@
   <ID>JAVA</ID>
   <OriginalElement />
   <nodes>
-    <node x="-269.0" y="273.0">ua.olebas.tests.addressbook.appmanager.ApplicationManager</node>
-    <node x="0.0" y="146.0">ua.olebas.tests.addressbook.tests.GroupDeletionTests</node>
-    <node x="109.25" y="0.0">ua.olebas.tests.addressbook.tests.TestBase</node>
-    <node x="219.0" y="146.0">ua.olebas.tests.addressbook.tests.GroupCreationTests</node>
-    <node x="285.0" y="242.0">ua.olebas.tests.addressbook.model.GroupData</node>
+    <node x="248.0" y="445.0">ua.olebas.tests.addressbook.tests.groups.GroupCreationTests</node>
+    <node x="475.0" y="445.0">ua.olebas.tests.addressbook.tests.contacts.ContactModificationTests</node>
+    <node x="0.0" y="0.0">ua.olebas.tests.addressbook.appmanager.ApplicationManager</node>
+    <node x="282.0" y="543.0">ua.olebas.tests.addressbook.model.ContactData</node>
+    <node x="966.0" y="445.0">ua.olebas.tests.addressbook.tests.contacts.ContactDeletionTests</node>
+    <node x="0.0" y="543.0">ua.olebas.tests.addressbook.appmanager.HelperBase</node>
+    <node x="0.0" y="445.0">ua.olebas.tests.addressbook.tests.groups.GroupModificationTests</node>
+    <node x="731.0" y="445.0">ua.olebas.tests.addressbook.tests.contacts.ContactCreationTests</node>
+    <node x="612.75" y="285.0">ua.olebas.tests.addressbook.tests.TestBase</node>
+    <node x="1200.0" y="445.0">ua.olebas.tests.addressbook.tests.groups.GroupDeletionTests</node>
+    <node x="627.0" y="543.0">ua.olebas.tests.addressbook.model.GroupData</node>
   </nodes>
   <notes />
   <edges>
-    <edge source="ua.olebas.tests.addressbook.tests.GroupDeletionTests" target="ua.olebas.tests.addressbook.tests.TestBase">
-      <point x="0.0" y="-25.5" />
-      <point x="99.5" y="121.0" />
-      <point x="159.25" y="121.0" />
-      <point x="-50.0" y="48.0" />
+    <edge source="ua.olebas.tests.addressbook.tests.contacts.ContactModificationTests" target="ua.olebas.tests.addressbook.tests.TestBase">
+      <point x="0.0" y="-26.5" />
+      <point x="593.0" y="425.0" />
+      <point x="698.5833333333334" y="425.0" />
+      <point x="-17.16666666666663" y="50.0" />
     </edge>
-    <edge source="ua.olebas.tests.addressbook.tests.GroupCreationTests" target="ua.olebas.tests.addressbook.tests.TestBase">
-      <point x="0.0" y="-25.5" />
-      <point x="319.0" y="121.0" />
-      <point x="259.25" y="121.0" />
-      <point x="50.0" y="48.0" />
+    <edge source="ua.olebas.tests.addressbook.tests.groups.GroupModificationTests" target="ua.olebas.tests.addressbook.tests.TestBase">
+      <point x="0.0" y="-26.5" />
+      <point x="114.0" y="405.0" />
+      <point x="629.9166666666666" y="405.0" />
+      <point x="-85.83333333333337" y="50.0" />
+    </edge>
+    <edge source="ua.olebas.tests.addressbook.tests.contacts.ContactCreationTests" target="ua.olebas.tests.addressbook.tests.TestBase">
+      <point x="0.0" y="-26.5" />
+      <point x="838.5" y="425.0" />
+      <point x="732.9166666666666" y="425.0" />
+      <point x="17.16666666666663" y="50.0" />
+    </edge>
+    <edge source="ua.olebas.tests.addressbook.tests.groups.GroupCreationTests" target="ua.olebas.tests.addressbook.tests.TestBase">
+      <point x="0.0" y="-26.5" />
+      <point x="351.5" y="415.0" />
+      <point x="664.25" y="415.0" />
+      <point x="-51.5" y="50.0" />
+    </edge>
+    <edge source="ua.olebas.tests.addressbook.tests.groups.GroupDeletionTests" target="ua.olebas.tests.addressbook.tests.TestBase">
+      <point x="0.0" y="-26.5" />
+      <point x="1303.0" y="405.0" />
+      <point x="801.5833333333334" y="405.0" />
+      <point x="85.83333333333337" y="50.0" />
+    </edge>
+    <edge source="ua.olebas.tests.addressbook.tests.contacts.ContactDeletionTests" target="ua.olebas.tests.addressbook.tests.TestBase">
+      <point x="0.0" y="-26.5" />
+      <point x="1073.0" y="415.0" />
+      <point x="767.25" y="415.0" />
+      <point x="51.5" y="50.0" />
     </edge>
   </edges>
-  <settings layout="Hierarchic Group" zoom="1.0" x="349.0" y="229.0" />
+  <settings layout="Hierarchic Group" zoom="1.0" x="521.0" y="443.0" />
   <SelectedNodes>
     <node>ua.olebas.tests.addressbook.appmanager.ApplicationManager</node>
   </SelectedNodes>
