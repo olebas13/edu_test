@@ -29,10 +29,22 @@ public class HelperBase {
 
 	public boolean isAlertPresent() {
 		try {
-			driver.switchTo().alert().accept();
+			driver.switchTo().alert();
 			return true;
 		} catch (NoAlertPresentException e) {
 			return false;
+		}
+	}
+
+	protected void alertAccept() {
+		if (isAlertPresent()) {
+			driver.switchTo().alert().accept();
+		}
+	}
+
+	protected void alertReject() {
+		if (isAlertPresent()) {
+			driver.switchTo().alert().dismiss();
 		}
 	}
 

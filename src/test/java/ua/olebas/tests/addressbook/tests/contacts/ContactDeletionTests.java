@@ -5,6 +5,8 @@ import org.testng.annotations.Test;
 import ua.olebas.tests.addressbook.model.ContactData;
 import ua.olebas.tests.addressbook.tests.TestBase;
 
+import java.util.List;
+
 public class ContactDeletionTests extends TestBase {
 
 	@Test
@@ -13,13 +15,14 @@ public class ContactDeletionTests extends TestBase {
 		if (! app.getContactHelper().isThereAContact()) {
 			app.getContactHelper().createContact(new ContactData("Olebas", "Gykach", "0683264327", "test1"), true);
 		}
-		int before = app.getContactHelper().getContactCount();
-		app.getContactHelper().selectContactForDelete();
+		List<ContactData> before = app.getContactHelper().getContactList();
+		app.getContactHelper().selectContact(before.size() - 1);
 		app.getContactHelper().deleteSelectedContacts();
-        Thread.sleep(2000);
-		int after = app.getContactHelper().getContactCount();
-
-
-        Assert.assertEquals(after, before - 1);
+		app.getContactHelper().submitComtactDeletion();
+		app.getNavigationHelper().gotoContactPage();
+		List<ContactData> after = app.getContactHelper().getContactList();
+		before.remove(before.size() - 1);
+		Assert.assertEquals(after.size(), before.size());
+        Assert.assertEquals(after, before);
 	}
 }

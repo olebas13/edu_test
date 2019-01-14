@@ -18,7 +18,11 @@ public class ContactHelper extends HelperBase {
 	}
 
 	public void initContactCreation() {
-		click(By.linkText("add new"));
+		click(By.linkText("ADD_NEW"));
+	}
+
+	public void addNextContact() {
+		click(By.linkText("add next"));
 	}
 
 	public void fillContactForm(ContactData contactData, boolean creation) {
@@ -41,21 +45,24 @@ public class ContactHelper extends HelperBase {
 		click(By.linkText("home page"));
 	}
 
-	public void initContactModification() {
-		click(By.cssSelector("img[alt='Edit']"));
+	public void initContactModification(int i) {
+		click(By.xpath("//table[@id='maintable']/tbody/tr["+i+"]/td[8]/a/img"));
 	}
 
-	public void selectContactForDelete() {
-		click(By.name("selected[]"));
+	public void selectContact(int index) {
+		driver.findElements(By.name("selected[]")).get(index).click();
 	}
 
 	public void deleteSelectedContacts() {
-		click(By.xpath("//input[@value='Delete']"));
-		isAlertPresent();
+		click(By.xpath("//*[@id=\"content\"]/form[2]/div[2]/input"));
+	}
+
+	public void submitComtactDeletion() {
+		alertAccept();
 	}
 
 	public void submitContactModification() {
-		click(By.xpath("//input[@value='Update']"));
+		click(By.xpath("//input[@value='UPDATE']"));
 	}
 
 	public boolean isThereAContact() {
@@ -73,4 +80,17 @@ public class ContactHelper extends HelperBase {
 	    return driver.findElements(By.name("selected[]")).size();
     }
 
+	public List<ContactData> getContactList() {
+		List<ContactData> contacts = new ArrayList<>();
+		List<WebElement> elements = driver.findElements(By.xpath("//tr[@name='entry']"));
+		for(WebElement elem: elements){
+			int id = Integer.parseInt(elem.findElement(By.tagName("input")).getAttribute("value"));
+			String firstname = elem.findElement(By.xpath("./td[3]")).getText();
+			String lastname = elem.findElement(By.xpath("./td[2]")).getText();
+			contacts.add(new ContactData(id,firstname,lastname));
+
+		}
+		return contacts;
+
+	}
 }

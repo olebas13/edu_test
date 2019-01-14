@@ -5,22 +5,30 @@ import org.testng.annotations.Test;
 import ua.olebas.tests.addressbook.model.ContactData;
 import ua.olebas.tests.addressbook.tests.TestBase;
 
+import java.util.Comparator;
+import java.util.List;
+
 public class ContactModificationTests extends TestBase {
 
 	@Test
-	public void testContactModification() throws InterruptedException {
+	public void testContactModification() {
 		app.getNavigationHelper().gotoContactPage();
 		if (! app.getContactHelper().isThereAContact()) {
 			app.getContactHelper().createContact(new ContactData("Olebas", "Gykach", "0683264327", "test1"), true);
 		}
-		int before = app.getContactHelper().getContactCount();
-		app.getContactHelper().initContactModification();
-		app.getContactHelper().fillContactForm(new ContactData("Oleg", "Nevoyt", "1548464648647", null), false);
+		List<ContactData> before = app.getContactHelper().getContactList();
+		app.getContactHelper().initContactModification(before.size() + 1);
+		ContactData contact = new ContactData("Olebas", "Gykach", "0683264327", "test1");
+		app.getContactHelper().fillContactForm(contact, false);
 		app.getContactHelper().submitContactModification();
 		app.getContactHelper().returnToContactPage();
-		Thread.sleep(2000);
-		int after = app.getContactHelper().getContactCount();
+		List<ContactData> after = app.getContactHelper().getContactList();
+		before.remove(before.size() - 1);
+		before.add(contact);
+		Comparator<? super ContactData> byId = (c1, c2) -> Integer.compare(c1.getId(), c2.getId());
+		after.sort(byId);
+		before.sort(byId);
 
-        Assert.assertEquals(before, after - 1); // костыль
+        Assert.assertEquals(before, after);
 	}
 }
