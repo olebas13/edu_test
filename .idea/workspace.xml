@@ -3,15 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="dac35a4d-8212-4eed-871e-c07db97210b5" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/ContactHelper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/ContactHelper.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/HelperBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/HelperBase.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/model/ContactData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/model/ContactData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/model/GroupData.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/model/GroupData.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/contacts/ContactCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/contacts/ContactCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/contacts/ContactDeletionTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/contacts/ContactDeletionTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/contacts/ContactModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/contacts/ContactModificationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupCreationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupCreationTests.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupModificationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupModificationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/TestBase.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/TestBase.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/target/" />
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -44,11 +36,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupCreationTests.java">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/TestBase.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="80">
-              <caret line="11" selection-start-line="11" selection-end-line="11" />
+            <state relative-caret-position="200">
+              <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#409#410#0" expanded="true" />
+                <element signature="e#426#427#0" expanded="true" />
+                <element signature="e#484#485#0" expanded="true" />
+                <element signature="e#501#502#0" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -65,8 +64,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupDeletionTests.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="200">
-              <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
+            <state relative-caret-position="160">
+              <caret line="13" selection-start-line="13" selection-end-line="13" />
             </state>
           </provider>
         </entry>
@@ -80,13 +79,18 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/contacts/ContactModificationTests.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="140">
               <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/pom.xml">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -128,21 +132,6 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/model/GroupData.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="411">
-              <caret line="29" column="37" selection-start-line="29" selection-start-column="37" selection-end-line="29" selection-end-column="37" />
-              <folding>
-                <element signature="e#853#854#0" expanded="true" />
-                <element signature="e#889#890#0" expanded="true" />
-                <element signature="e#1197#1198#0" expanded="true" />
-                <element signature="e#1216#1217#0" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -155,7 +144,6 @@
         <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/SessionHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/NavigationHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupDeletionTests.java" />
-        <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/TestBase.java" />
         <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/GroupHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/model/ContactData.java" />
         <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupModificationTests.java" />
@@ -166,6 +154,7 @@
         <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/contacts/ContactDeletionTests.java" />
         <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/appmanager/ContactHelper.java" />
         <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/contacts/ContactModificationTests.java" />
+        <option value="$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/TestBase.java" />
       </list>
     </option>
   </component>
@@ -257,6 +246,16 @@
               <item name="addressbook" type="462c0819:PsiDirectoryNode" />
               <item name="tests" type="462c0819:PsiDirectoryNode" />
               <item name="contacts" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="edu_test" type="b2602c69:ProjectViewProjectNode" />
+              <item name="edu_test" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="test" type="462c0819:PsiDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="addressbook" type="462c0819:PsiDirectoryNode" />
+              <item name="tests" type="462c0819:PsiDirectoryNode" />
+              <item name="groups" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -351,7 +350,7 @@
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547482353157" />
+    <property name="com.android.tools.idea.instantapp.provision.ProvisionBeforeRunTaskProvider.myTimeStamp" value="1547548063506" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
@@ -372,7 +371,7 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="TestNG.ContactModificationTests">
+  <component name="RunManager" selected="TestNG.ua.olebas.tests.addressbook.tests.groups">
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
       <method v="2">
@@ -436,23 +435,6 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="GroupCreationTests" type="TestNG" temporary="true" nameIsGenerated="true">
-      <module name="edu_test" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="ua.olebas.tests.addressbook.tests.groups.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="ua.olebas.tests.addressbook.tests.groups" />
-      <option name="MAIN_CLASS_NAME" value="ua.olebas.tests.addressbook.tests.groups.GroupCreationTests" />
-      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="GroupModificationTests" type="TestNG" temporary="true" nameIsGenerated="true">
       <module name="edu_test" />
       <extension name="coverage">
@@ -478,20 +460,37 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="ua.olebas.tests.addressbook.tests.groups" type="TestNG" temporary="true" nameIsGenerated="true">
+      <module name="edu_test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="ua.olebas.tests.addressbook.tests.groups.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="ua.olebas.tests.addressbook.tests.groups" />
+      <option name="TEST_OBJECT" value="PACKAGE" />
+      <option name="WORKING_DIRECTORY" value="%MODULE_WORKING_DIR%" />
+      <properties />
+      <listeners />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <list>
       <item itemvalue="TestNG.ContactModificationTests" />
-      <item itemvalue="TestNG.GroupCreationTests" />
       <item itemvalue="TestNG.GroupModificationTests" />
       <item itemvalue="TestNG.ContactCreationTests" />
       <item itemvalue="TestNG.ContactDeletionTests" />
+      <item itemvalue="TestNG.ua.olebas.tests.addressbook.tests.groups" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="TestNG.ua.olebas.tests.addressbook.tests.groups" />
         <item itemvalue="TestNG.ContactModificationTests" />
         <item itemvalue="TestNG.ContactDeletionTests" />
         <item itemvalue="TestNG.ContactCreationTests" />
         <item itemvalue="TestNG.GroupModificationTests" />
-        <item itemvalue="TestNG.GroupCreationTests" />
       </list>
     </recent_temporary>
   </component>
@@ -513,7 +512,7 @@
       <workItem from="1534755851375" duration="4261000" />
       <workItem from="1547458877205" duration="1626000" />
       <workItem from="1547461186213" duration="2840000" />
-      <workItem from="1547471679761" duration="7922000" />
+      <workItem from="1547471679761" duration="10502000" />
     </task>
     <task id="LOCAL-00001" summary="fix">
       <created>1533121884224</created>
@@ -526,12 +525,6 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="GroupCreationTests - 2019.01.14 at 17h 24m 21s.xml">
-      <configuration name="GroupCreationTests" configurationId="TestNG" />
-    </history-entry>
-    <history-entry file="GroupCreationTests - 2019.01.14 at 17h 25m 54s.xml">
-      <configuration name="GroupCreationTests" configurationId="TestNG" />
-    </history-entry>
     <history-entry file="ContactModificationTests - 2019.01.14 at 17h 26m 16s.xml">
       <configuration name="ContactModificationTests" configurationId="TestNG" />
     </history-entry>
@@ -556,15 +549,21 @@
     <history-entry file="ContactModificationTests - 2019.01.14 at 18h 06m 20s.xml">
       <configuration name="ContactModificationTests" configurationId="TestNG" />
     </history-entry>
+    <history-entry file="ua_olebas_tests_addressbook_tests_groups - 2019.01.15 at 12h 16m 38s.xml">
+      <configuration name="ua.olebas.tests.addressbook.tests.groups" configurationId="TestNG" />
+    </history-entry>
+    <history-entry file="ua_olebas_tests_addressbook_tests_groups - 2019.01.15 at 12h 23m 31s.xml">
+      <configuration name="ua.olebas.tests.addressbook.tests.groups" configurationId="TestNG" />
+    </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="33415000" />
+    <option name="totallyTimeSpent" value="35995000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18283582" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.18283582" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -580,7 +579,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Version Control" order="7" weight="0.3297414" />
       <window_info anchor="bottom" id="Database Changes" order="8" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="9" weight="0.716143" />
+      <window_info anchor="bottom" id="Terminal" order="9" weight="0.42361864" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="bottom" id="Messages" order="11" weight="0.32936078" />
       <window_info anchor="bottom" id="Docker" order="12" show_stripe_button="false" />
@@ -677,9 +676,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/seleniumhq/selenium/selenium-remote-driver/3.13.0/selenium-remote-driver-3.13.0.jar!/org/openqa/selenium/remote/BrowserType.class">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="80">
@@ -705,18 +701,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="260">
           <caret line="16" column="45" selection-start-line="16" selection-start-column="45" selection-end-line="16" selection-end-column="45" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/TestBase.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="320">
-          <caret line="23" selection-start-line="23" selection-end-line="23" />
-          <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#484#485#0" expanded="true" />
-            <element signature="e#501#502#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -816,13 +800,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupDeletionTests.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="200">
-          <caret line="15" column="59" lean-forward="true" selection-start-line="15" selection-start-column="59" selection-end-line="15" selection-end-column="59" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/contacts/ContactDeletionTests.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="320">
@@ -862,6 +839,30 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="140">
           <caret line="13" column="42" selection-start-line="13" selection-start-column="42" selection-end-line="13" selection-end-column="42" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pom.xml">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/groups/GroupDeletionTests.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="160">
+          <caret line="13" selection-start-line="13" selection-end-line="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/ua/olebas/tests/addressbook/tests/TestBase.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="200">
+          <caret line="10" column="20" selection-start-line="10" selection-start-column="20" selection-end-line="10" selection-end-column="20" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#409#410#0" expanded="true" />
+            <element signature="e#426#427#0" expanded="true" />
+            <element signature="e#484#485#0" expanded="true" />
+            <element signature="e#501#502#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
