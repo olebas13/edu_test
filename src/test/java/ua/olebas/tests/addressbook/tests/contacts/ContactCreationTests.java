@@ -12,17 +12,17 @@ public class ContactCreationTests extends TestBase {
 
 	@Test
 	public void testContactCreation() {
-		app.getNavigationHelper().gotoContactPage();
-		List<ContactData> before = app.getContactHelper().getContactList();
-		app.getContactHelper().initContactCreation();
+		app.goTo().contactPage();
+		List<ContactData> before = app.contact().list();
+		app.contact().initContactCreation();
 		ContactData contact1 = new ContactData("user1", "user2", "+380683264356", "test1");
 		ContactData contact2 = new ContactData("user2", "user2", "+380647896541", "test1");
-		app.getContactHelper().fillContactForm(contact1, true);
-		app.getContactHelper().submitContactCreation();
-		app.getContactHelper().addNextContact();
-		app.getContactHelper().fillContactForm(contact2, true);
-		app.getContactHelper().submitContactCreation();
-		List<ContactData> after = app.getContactHelper().getContactList();
+		app.contact().fillForm(contact1, true);
+		app.contact().submit();
+		app.contact().addNext();
+		app.contact().fillForm(contact2, true);
+		app.contact().submit();
+		List<ContactData> after = app.contact().list();
 
 		Comparator<? super ContactData> byId = (o1, o2) -> Integer.compare(o1.getId(), o2.getId());
 		contact1.setId(after.stream().max(byId).get().getId() - 1);

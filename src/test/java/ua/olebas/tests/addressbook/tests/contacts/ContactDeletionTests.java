@@ -1,6 +1,7 @@
 package ua.olebas.tests.addressbook.tests.contacts;
 
 import org.testng.Assert;
+import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ua.olebas.tests.addressbook.model.ContactData;
 import ua.olebas.tests.addressbook.tests.TestBase;
@@ -9,20 +10,25 @@ import java.util.List;
 
 public class ContactDeletionTests extends TestBase {
 
+	@BeforeMethod
+	public void ensurePreconditions() {
+		app.goTo().contactPage();
+		if (app.contact().list().size() == 0) {
+			app.contact().create(new ContactData("Olebas", "Gykach", "0683264327", "test1"), true);
+		}
+	}
+
 	@Test
 	public void testContactDeletion() throws InterruptedException {
-		app.getNavigationHelper().gotoContactPage();
-		if (! app.getContactHelper().isThereAContact()) {
-			app.getContactHelper().createContact(new ContactData("Olebas", "Gykach", "0683264327", "test1"), true);
-		}
-		List<ContactData> before = app.getContactHelper().getContactList();
-		app.getContactHelper().selectContact(before.size() - 1);
-		app.getContactHelper().deleteSelectedContacts();
-		app.getContactHelper().submitComtactDeletion();
-		app.getNavigationHelper().gotoContactPage();
-		List<ContactData> after = app.getContactHelper().getContactList();
-		before.remove(before.size() - 1);
+		List<ContactData> before = app.contact().list();
+		int index = before.size() - 1;
+		app.contact().delete(index);
+		app.goTo().contactPage();
+		List<ContactData> after = app.contact().list();
+		before.remove(index);
 		Assert.assertEquals(after.size(), before.size());
         Assert.assertEquals(after, before);
 	}
+
+
 }

@@ -21,11 +21,11 @@ public class ContactHelper extends HelperBase {
 		click(By.linkText("ADD_NEW"));
 	}
 
-	public void addNextContact() {
+	public void addNext() {
 		click(By.linkText("add next"));
 	}
 
-	public void fillContactForm(ContactData contactData, boolean creation) {
+	public void fillForm(ContactData contactData, boolean creation) {
 		type(By.name("firstname"), contactData.getFirstname());
 		type(By.name("lastname"), contactData.getLastname());
 		type(By.name("mobile"), contactData.getPhone());
@@ -37,7 +37,7 @@ public class ContactHelper extends HelperBase {
 		}
 	}
 
-	public void submitContactCreation() {
+	public void submit() {
 		click(By.name("submit"));
 	}
 
@@ -69,18 +69,31 @@ public class ContactHelper extends HelperBase {
 		return isElementPresent(By.name("selected[]"));
 	}
 
-	public void createContact(ContactData contact, boolean creation) {
+	public void create(ContactData contact, boolean creation) {
 		initContactCreation();
-		fillContactForm(contact, creation);
-		submitContactCreation();
+		fillForm(contact, creation);
+		submit();
 		returnToContactPage();
+	}
+
+	public void modify(int index, ContactData contact) {
+		initContactModification(index);
+		fillForm(contact, false);
+		submitContactModification();
+		returnToContactPage();
+	}
+
+	public void delete(int index) {
+		selectContact(index);
+		deleteSelectedContacts();
+		submitComtactDeletion();
 	}
 
     public int getContactCount() {
 	    return driver.findElements(By.name("selected[]")).size();
     }
 
-	public List<ContactData> getContactList() {
+	public List<ContactData> list() {
 		List<ContactData> contacts = new ArrayList<>();
 		List<WebElement> elements = driver.findElements(By.xpath("//tr[@name='entry']"));
 		for(WebElement elem: elements){
