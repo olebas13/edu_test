@@ -10,20 +10,6 @@ public class ContactData {
 	private String phone;
 	private String group;
 
-	public ContactData(String firstname, String lastname, String phone, String group) {
-		this.firstname = firstname;
-		this.lastname = lastname;
-		this.phone = phone;
-		this.group = group;
-	}
-
-	public ContactData(int id, String firstname, String lastname) {
-		this.id = id;
-		this.firstname = firstname;
-		this.lastname = lastname;
-	}
-
-
 	public String getFirstname() {
 		return firstname;
 	}
@@ -48,6 +34,25 @@ public class ContactData {
 		this.id = id;
 	}
 
+	public ContactData withFirstname(String firstname) {
+		this.firstname = firstname;
+		return this;
+	}
+
+	public ContactData withLastname(String lastname) {
+		this.lastname = lastname;
+		return this;
+	}
+
+	public ContactData withPhone(String phone) {
+		this.phone = phone;
+		return this;
+	}
+
+	public ContactData withGroup(String group) {
+		this.group = group;
+		return this;
+	}
 
 	@Override
 	public String toString() {

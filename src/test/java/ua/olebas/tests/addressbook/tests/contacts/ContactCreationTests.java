@@ -15,8 +15,16 @@ public class ContactCreationTests extends TestBase {
 		app.goTo().contactPage();
 		List<ContactData> before = app.contact().list();
 		app.contact().initContactCreation();
-		ContactData contact1 = new ContactData("user1", "user2", "+380683264356", "test1");
-		ContactData contact2 = new ContactData("user2", "user2", "+380647896541", "test1");
+		ContactData contact1 = new ContactData()
+				.withFirstname("Olebas")
+				.withLastname("Gykach")
+				.withPhone("0683264327")
+				.withGroup("group1");
+		ContactData contact2 = new ContactData()
+				.withFirstname("user2")
+				.withLastname("user2")
+				.withPhone("+380647896541")
+				.withGroup("test1");
 		app.contact().fillForm(contact1, true);
 		app.contact().submit();
 		app.contact().addNext();
