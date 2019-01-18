@@ -1,12 +1,10 @@
-package ua.olebas.tests.addressbook.tests;
+package ua.olebas.tests.addressbook.appmanager;
 
 import org.openqa.selenium.remote.BrowserType;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
-import ua.olebas.tests.addressbook.appmanager.ApplicationManager;
 
 public class TestBase {
-
 
 	protected static final ApplicationManager app = new ApplicationManager(BrowserType.CHROME);
 

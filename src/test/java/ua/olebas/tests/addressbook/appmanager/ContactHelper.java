@@ -8,7 +8,9 @@ import org.testng.Assert;
 import ua.olebas.tests.addressbook.model.ContactData;
 
 import java.util.ArrayList;
+import java.util.HashSet;
 import java.util.List;
+import java.util.Set;
 
 public class ContactHelper extends HelperBase {
 
@@ -100,10 +102,41 @@ public class ContactHelper extends HelperBase {
 			int id = Integer.parseInt(elem.findElement(By.tagName("input")).getAttribute("value"));
 			String firstname = elem.findElement(By.xpath("./td[3]")).getText();
 			String lastname = elem.findElement(By.xpath("./td[2]")).getText();
-			contacts.add(new ContactData(id,firstname,lastname));
+			contacts.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname));
 
 		}
 		return contacts;
+	}
 
+	public Set<ContactData> all() {
+		Set<ContactData> contacts = new HashSet<>();
+		List<WebElement> elements = driver.findElements(By.xpath("//tr[@name='entry']"));
+		for(WebElement elem: elements){
+			int id = Integer.parseInt(elem.findElement(By.tagName("input")).getAttribute("value"));
+			String firstname = elem.findElement(By.xpath("./td[3]")).getText();
+			String lastname = elem.findElement(By.xpath("./td[2]")).getText();
+			contacts.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname));
+		}
+		return contacts;
+	}
+
+	public void delete(ContactData contact) {
+		selectContactById(contact.getId());
+		deleteSelectedContacts();
+		submitComtactDeletion();
+	}
+
+	private void selectContactById(int id) {
+		driver.findElement(By.cssSelector("input[value='" + id + "']")).click();
+	}
+	public void initContactModificationById(int id) {
+		driver.findElement(By.xpath("//tr[.//input[@value='" + id + "']]/td[8]/a")).click();
+	}
+
+	public void modify(ContactData contact) {
+		initContactModificationById(contact.getId());
+		fillForm(contact, false);
+		submitContactModification();
+		returnToContactPage();
 	}
 }

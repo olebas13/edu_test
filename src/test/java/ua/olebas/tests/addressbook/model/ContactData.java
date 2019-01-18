@@ -30,8 +30,9 @@ public class ContactData {
 		return id;
 	}
 
-	public void setId(int id) {
+	public ContactData withId(int id) {
 		this.id = id;
+		return this;
 	}
 
 	public ContactData withFirstname(String firstname) {
@@ -55,17 +56,6 @@ public class ContactData {
 	}
 
 	@Override
-	public String toString() {
-		return "ContactData{" +
-				"id=" + id +
-				", firstname='" + firstname + '\'' +
-				", lastname='" + lastname + '\'' +
-				", phone='" + phone + '\'' +
-				", group='" + group + '\'' +
-				'}';
-	}
-
-	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
 		if (o == null || getClass() != o.getClass()) return false;
@@ -79,4 +69,16 @@ public class ContactData {
 	public int hashCode() {
 		return Objects.hash(id, firstname, lastname);
 	}
+
+	@Override
+	public String toString() {
+		return "ContactData{" +
+				"id=" + id +
+				", firstname='" + firstname + '\'' +
+				", lastname='" + lastname + '\'' +
+				", phone='" + phone + '\'' +
+				", group='" + group + '\'' +
+				'}';
+	}
+
 }

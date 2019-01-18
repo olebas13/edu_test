@@ -3,42 +3,40 @@ package ua.olebas.tests.addressbook.tests.contacts;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ua.olebas.tests.addressbook.model.ContactData;
-import ua.olebas.tests.addressbook.tests.TestBase;
+import ua.olebas.tests.addressbook.appmanager.TestBase;
 
-import java.util.Comparator;
-import java.util.List;
+import java.util.Set;
 
 public class ContactModificationTests extends TestBase {
 
 	@BeforeMethod
 	public void ensurePreconditions() {
 		app.goTo().contactPage();
-		if (app.contact().list().size() == 0) {
+		if (app.contact().all().size() == 0) {
 			app.contact().create(new ContactData()
 					.withFirstname("Olebas")
 					.withLastname("Gykach")
 					.withPhone("0683264327")
-					.withGroup("group1"),
+					.withGroup("test1"),
 					true);
 		}
 	}
 
 	@Test
 	public void testContactModification() {
-		List<ContactData> before = app.contact().list();
-		int index = before.size();
+		Set<ContactData> before = app.contact().all();
+		ContactData modifiedContact = before.iterator().next();
 		ContactData contact = new ContactData()
+				.withId(modifiedContact.getId())
 				.withFirstname("Olebas")
 				.withLastname("Gykach")
 				.withPhone("0683264327")
 				.withGroup("group1");
-		app.contact().modify(index + 1, contact);
-		List<ContactData> after = app.contact().list();
-		before.remove(index - 1);
+		app.contact().modify(contact);
+		Set<ContactData> after = app.contact().all();
+//		Assert.assertEquals(after.size(), before.size());
+		before.remove(modifiedContact);
 		before.add(contact);
-		Comparator<? super ContactData> byId = (c1, c2) -> Integer.compare(c1.getId(), c2.getId());
-		after.sort(byId);
-		before.sort(byId);
 
 //        Assert.assertEquals(before, after);
 	}

@@ -4,16 +4,16 @@ import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ua.olebas.tests.addressbook.model.ContactData;
-import ua.olebas.tests.addressbook.tests.TestBase;
+import ua.olebas.tests.addressbook.appmanager.TestBase;
 
-import java.util.List;
+import java.util.Set;
 
 public class ContactDeletionTests extends TestBase {
 
 	@BeforeMethod
 	public void ensurePreconditions() {
 		app.goTo().contactPage();
-		if (app.contact().list().size() == 0) {
+		if (app.contact().all().size() == 0) {
 			app.contact().create(new ContactData()
 							.withFirstname("Olebas")
 							.withLastname("Gykach")
@@ -25,13 +25,13 @@ public class ContactDeletionTests extends TestBase {
 
 	@Test
 	public void testContactDeletion() throws InterruptedException {
-		List<ContactData> before = app.contact().list();
-		int index = before.size() - 1;
-		app.contact().delete(index);
+		Set<ContactData> before = app.contact().all();
+		ContactData deletedContact = before.iterator().next();
+		app.contact().delete(deletedContact);
 		app.goTo().contactPage();
-		List<ContactData> after = app.contact().list();
-		before.remove(index);
-		Assert.assertEquals(after.size(), before.size());
+		Set<ContactData> after = app.contact().all();
+		Assert.assertEquals(after.size(), before.size() - 1);
+		before.remove(deletedContact);
         Assert.assertEquals(after, before);
 	}
 
