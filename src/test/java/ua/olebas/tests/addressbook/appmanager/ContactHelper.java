@@ -6,8 +6,8 @@ import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 import org.testng.Assert;
 import ua.olebas.tests.addressbook.model.ContactData;
+import ua.olebas.tests.addressbook.model.Contacts;
 
-import java.util.ArrayList;
 import java.util.HashSet;
 import java.util.List;
 import java.util.Set;
@@ -59,7 +59,7 @@ public class ContactHelper extends HelperBase {
 		click(By.xpath("//*[@id=\"content\"]/form[2]/div[2]/input"));
 	}
 
-	public void submitComtactDeletion() {
+	public void submitContactDeletion() {
 		alertAccept();
 	}
 
@@ -78,38 +78,12 @@ public class ContactHelper extends HelperBase {
 		returnToContactPage();
 	}
 
-	public void modify(int index, ContactData contact) {
-		initContactModification(index);
-		fillForm(contact, false);
-		submitContactModification();
-		returnToContactPage();
-	}
-
-	public void delete(int index) {
-		selectContact(index);
-		deleteSelectedContacts();
-		submitComtactDeletion();
-	}
-
     public int getContactCount() {
 	    return driver.findElements(By.name("selected[]")).size();
     }
 
-	public List<ContactData> list() {
-		List<ContactData> contacts = new ArrayList<>();
-		List<WebElement> elements = driver.findElements(By.xpath("//tr[@name='entry']"));
-		for(WebElement elem: elements){
-			int id = Integer.parseInt(elem.findElement(By.tagName("input")).getAttribute("value"));
-			String firstname = elem.findElement(By.xpath("./td[3]")).getText();
-			String lastname = elem.findElement(By.xpath("./td[2]")).getText();
-			contacts.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname));
-
-		}
-		return contacts;
-	}
-
-	public Set<ContactData> all() {
-		Set<ContactData> contacts = new HashSet<>();
+	public Contacts all() {
+		Contacts contacts = new Contacts();
 		List<WebElement> elements = driver.findElements(By.xpath("//tr[@name='entry']"));
 		for(WebElement elem: elements){
 			int id = Integer.parseInt(elem.findElement(By.tagName("input")).getAttribute("value"));
@@ -123,12 +97,13 @@ public class ContactHelper extends HelperBase {
 	public void delete(ContactData contact) {
 		selectContactById(contact.getId());
 		deleteSelectedContacts();
-		submitComtactDeletion();
+		submitContactDeletion();
 	}
 
 	private void selectContactById(int id) {
 		driver.findElement(By.cssSelector("input[value='" + id + "']")).click();
 	}
+
 	public void initContactModificationById(int id) {
 		driver.findElement(By.xpath("//tr[.//input[@value='" + id + "']]/td[8]/a")).click();
 	}

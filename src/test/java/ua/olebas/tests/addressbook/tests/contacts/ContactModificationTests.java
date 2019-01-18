@@ -1,11 +1,17 @@
 package ua.olebas.tests.addressbook.tests.contacts;
 
+import org.hamcrest.CoreMatchers;
+import org.hamcrest.MatcherAssert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ua.olebas.tests.addressbook.model.ContactData;
 import ua.olebas.tests.addressbook.appmanager.TestBase;
+import ua.olebas.tests.addressbook.model.Contacts;
 
 import java.util.Set;
+
+import static org.hamcrest.CoreMatchers.*;
+import static org.hamcrest.MatcherAssert.*;
 
 public class ContactModificationTests extends TestBase {
 
@@ -24,21 +30,17 @@ public class ContactModificationTests extends TestBase {
 
 	@Test
 	public void testContactModification() {
-		Set<ContactData> before = app.contact().all();
+		Contacts before = app.contact().all();
 		ContactData modifiedContact = before.iterator().next();
 		ContactData contact = new ContactData()
 				.withId(modifiedContact.getId())
-				.withFirstname("Olebas")
-				.withLastname("Gykach")
-				.withPhone("0683264327")
-				.withGroup("group1");
+				.withFirstname("Oleg")
+				.withLastname("Gykac")
+				.withPhone("1231234345");
 		app.contact().modify(contact);
-		Set<ContactData> after = app.contact().all();
-//		Assert.assertEquals(after.size(), before.size());
-		before.remove(modifiedContact);
-		before.add(contact);
-
-//        Assert.assertEquals(before, after);
+		Contacts after = app.contact().all();
+//		assertThat(after.size(), equalTo(before.size()));
+//		assertThat(after, equalTo(before.without(modifiedContact).withAdded(contact)));
 	}
 
 }

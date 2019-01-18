@@ -1,18 +1,19 @@
 package ua.olebas.tests.addressbook.tests.contacts;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
-import ua.olebas.tests.addressbook.model.ContactData;
 import ua.olebas.tests.addressbook.appmanager.TestBase;
+import ua.olebas.tests.addressbook.model.ContactData;
+import ua.olebas.tests.addressbook.model.Contacts;
 
-import java.util.Set;
+import static org.hamcrest.CoreMatchers.equalTo;
+import static org.hamcrest.MatcherAssert.assertThat;
 
 public class ContactCreationTests extends TestBase {
 
 	@Test
 	public void testContactCreation() {
 		app.goTo().contactPage();
-		Set<ContactData> before = app.contact().all();
+		Contacts before = app.contact().all();
 		app.contact().initContactCreation();
 		ContactData contact = new ContactData()
 				.withFirstname("Olebas")
@@ -21,12 +22,8 @@ public class ContactCreationTests extends TestBase {
 				.withGroup("test1");
 		app.contact().fillForm(contact, true);
 		app.contact().submit();
-		Set<ContactData> after = app.contact().all();
-		Assert.assertEquals(after.size(), before.size() + 1);
-
-		contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt());
-		before.add(contact);
-		Assert.assertEquals(before, after);
-
+		Contacts after = app.contact().all();
+		assertThat(after.size(), equalTo(before.size() + 1));
+		assertThat(after, equalTo(before.withAdded(contact.withId(after.stream().mapToInt((c) -> c.getId()).max().getAsInt()))));
 	}
 }
