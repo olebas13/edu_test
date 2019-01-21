@@ -1,17 +1,10 @@
 package ua.olebas.tests.addressbook.tests.contacts;
 
-import org.hamcrest.CoreMatchers;
-import org.hamcrest.MatcherAssert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 import ua.olebas.tests.addressbook.model.ContactData;
 import ua.olebas.tests.addressbook.appmanager.TestBase;
 import ua.olebas.tests.addressbook.model.Contacts;
-
-import java.util.Set;
-
-import static org.hamcrest.CoreMatchers.*;
-import static org.hamcrest.MatcherAssert.*;
 
 public class ContactModificationTests extends TestBase {
 
@@ -22,7 +15,9 @@ public class ContactModificationTests extends TestBase {
 			app.contact().create(new ContactData()
 					.withFirstname("Olebas")
 					.withLastname("Gykach")
-					.withPhone("0683264327")
+					.withHomePhone("0413595418")
+					.withMobilePhone("0683264327")
+					.withWorkPhone("0446668877")
 					.withGroup("test1"),
 					true);
 		}
@@ -36,7 +31,9 @@ public class ContactModificationTests extends TestBase {
 				.withId(modifiedContact.getId())
 				.withFirstname("Oleg")
 				.withLastname("Gykac")
-				.withPhone("1231234345");
+				.withHomePhone("0413598748")
+				.withMobilePhone("1231234345")
+				.withWorkPhone("0447896541");
 		app.contact().modify(contact);
 //		assertThat(app.contact().count(), equalTo(before.size()));
 		Contacts after = app.contact().all();

@@ -8,14 +8,11 @@ import org.testng.Assert;
 import ua.olebas.tests.addressbook.model.ContactData;
 import ua.olebas.tests.addressbook.model.Contacts;
 
-import java.util.HashSet;
 import java.util.List;
-import java.util.Set;
 
 public class ContactHelper extends HelperBase {
 
 	private Contacts contactCache = null;
-
 
 	public ContactHelper(WebDriver driver) {
 		super(driver);
@@ -32,10 +29,15 @@ public class ContactHelper extends HelperBase {
 	public void fillForm(ContactData contactData, boolean creation) {
 		type(By.name("firstname"), contactData.getFirstname());
 		type(By.name("lastname"), contactData.getLastname());
-		type(By.name("mobile"), contactData.getPhone());
+		type(By.name("home"), contactData.getHomePhone());
+		type(By.name("mobile"), contactData.getMobilePhone());
+		type(By.name("work"), contactData.getWorkPhone());
 
 		if (creation) {
-			new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+			if (contactData.getGroups().size() > 0) {
+				Assert.assertTrue(contactData.getGroups().size() == 1);
+				new Select(driver.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroups().iterator().next().getName());
+			}
 		} else {
 			Assert.assertFalse(isElementPresent(By.name("new_group")));
 		}
@@ -77,7 +79,6 @@ public class ContactHelper extends HelperBase {
 		initContactCreation();
 		fillForm(contact, creation);
 		submit();
-		contactCache = null;
 		returnToContactPage();
 	}
 
@@ -91,21 +92,23 @@ public class ContactHelper extends HelperBase {
 		}
 		contactCache = new Contacts();
 		List<WebElement> elements = driver.findElements(By.xpath("//tr[@name='entry']"));
-		for(WebElement elem: elements){
+		for (WebElement elem : elements) {
 			int id = Integer.parseInt(elem.findElement(By.tagName("input")).getAttribute("value"));
 			String firstname = elem.findElement(By.xpath("./td[3]")).getText();
 			String lastname = elem.findElement(By.xpath("./td[2]")).getText();
-			contactCache.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname));
+			String allPhones = elem.findElement(By.xpath("./td[6]")).getText();
+			String[] phones = allPhones.split("\n");
+			contactCache.add(new ContactData().withId(id).withFirstname(firstname).withLastname(lastname)
+					.withHomePhone(phones[0]).withMobilePhone(phones[1]).withWorkPhone(phones[2]));
 		}
-		return new Contacts(contactCache);
 
+		return new Contacts(contactCache);
 	}
 
 	public void delete(ContactData contact) {
 		selectContactById(contact.getId());
 		deleteSelectedContacts();
 		submitContactDeletion();
-		contactCache = null;
 	}
 
 	private void selectContactById(int id) {
@@ -113,14 +116,29 @@ public class ContactHelper extends HelperBase {
 	}
 
 	public void initContactModificationById(int id) {
-		driver.findElement(By.xpath("//tr[.//input[@value='" + id + "']]/td[8]/a")).click();
+		WebElement checkbox = driver.findElement(By.cssSelector(String.format("input[value='%s']", id)));
+		WebElement row = checkbox.findElement(By.xpath("./../.."));
+		List<WebElement> cells = row.findElements(By.tagName("td"));
+		cells.get(7).findElement(By.tagName("a")).click();
 	}
 
 	public void modify(ContactData contact) {
 		initContactModificationById(contact.getId());
 		fillForm(contact, false);
 		submitContactModification();
-		contactCache = null;
 		returnToContactPage();
+	}
+
+	public ContactData infoFromEditForm(ContactData contact) {
+		initContactModificationById(contact.getId());
+		String firstname = driver.findElement(By.name("firstname")).getAttribute("value");
+		String lastname = driver.findElement(By.name("lastname")).getAttribute("value");
+		String home = driver.findElement(By.name("home")).getAttribute("value");
+		String mobile = driver.findElement(By.name("mobile")).getAttribute("value");
+		String work = driver.findElement(By.name("work")).getAttribute("value");
+		driver.navigate().back();
+		return new ContactData()
+				.withId(contact.getId()).withFirstname(firstname).withLastname(lastname)
+				.withHomePhone(home).withMobilePhone(mobile).withWorkPhone(work);
 	}
 }

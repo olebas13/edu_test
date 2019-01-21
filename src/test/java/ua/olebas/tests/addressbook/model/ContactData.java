@@ -1,14 +1,19 @@
 package ua.olebas.tests.addressbook.model;
 
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 public class ContactData {
 
 	private int id;
 	private String firstname;
 	private String lastname;
-	private String phone;
+	private String homePhone;
+	private String mobilePhone;
+	private String workPhone;
 	private String group;
+	private Set<GroupData> groups = new HashSet<GroupData>();
 
 	public String getFirstname() {
 		return firstname;
@@ -18,12 +23,24 @@ public class ContactData {
 		return lastname;
 	}
 
-	public String getPhone() {
-		return phone;
+	public String getHomePhone() {
+		return homePhone;
+	}
+
+	public String getMobilePhone() {
+		return mobilePhone;
+	}
+
+	public String getWorkPhone() {
+		return workPhone;
 	}
 
 	public String getGroup() {
 		return group;
+	}
+
+	public Groups getGroups() {
+		return new Groups(groups);
 	}
 
 	public int getId() {
@@ -45,8 +62,19 @@ public class ContactData {
 		return this;
 	}
 
-	public ContactData withPhone(String phone) {
-		this.phone = phone;
+	public ContactData withHomePhone(String homePhone) {
+		this.homePhone = homePhone;
+		return this;
+	}
+
+	public ContactData withMobilePhone(String mobilePhone) {
+		this.mobilePhone = mobilePhone;
+		return this;
+	}
+
+
+	public ContactData withWorkPhone(String workPhone) {
+		this.workPhone = workPhone;
 		return this;
 	}
 
@@ -76,9 +104,12 @@ public class ContactData {
 				"id=" + id +
 				", firstname='" + firstname + '\'' +
 				", lastname='" + lastname + '\'' +
-				", phone='" + phone + '\'' +
+				", homePhone='" + homePhone + '\'' +
+				", mobilePhone='" + mobilePhone + '\'' +
+				", workPhone='" + workPhone + '\'' +
 				", group='" + group + '\'' +
 				'}';
 	}
+
 
 }
