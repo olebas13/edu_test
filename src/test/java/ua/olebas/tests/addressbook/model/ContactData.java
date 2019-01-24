@@ -1,5 +1,6 @@
 package ua.olebas.tests.addressbook.model;
 
+import java.io.File;
 import java.util.HashSet;
 import java.util.Objects;
 import java.util.Set;
@@ -14,6 +15,8 @@ public class ContactData {
 	private String workPhone;
 	private String group;
 	private Set<GroupData> groups = new HashSet<GroupData>();
+	private String allPhones;
+	private File photo;
 
 	public String getFirstname() {
 		return firstname;
@@ -47,6 +50,14 @@ public class ContactData {
 		return id;
 	}
 
+	public String getAllPhones() {
+		return allPhones;
+	}
+
+	public File getPhoto() {
+		return photo;
+	}
+
 	public ContactData withId(int id) {
 		this.id = id;
 		return this;
@@ -78,8 +89,18 @@ public class ContactData {
 		return this;
 	}
 
+	public ContactData withAllPhones(String allPhones) {
+		this.allPhones = allPhones;
+		return this;
+	}
+
 	public ContactData withGroup(String group) {
 		this.group = group;
+		return this;
+	}
+
+	public ContactData withPhoto(File photo) {
+		this.photo = photo;
 		return this;
 	}
 
